@@ -1,0 +1,25 @@
+:root {
+    --white: #C4822A;
+    --dark:#707070;
+    --primary:#707070;
+    --secundary:#24C43B;
+
+}
+
+
+html {
+     font-family: "roboto";
+     font-size: 62.5%;
+}
+
+html h1 {
+    text-align: center;
+    font-size: 4rem ;
+    color:var(--primary);
+    font-weight: bolder;
+
+}
+
+html h1 span {
+
+}
