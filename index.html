@@ -4,87 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>freelander</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/syle.css">
 </head>
 <body>
-    <HEader>
+    <header>
 
-        <h1>Lorena Martin. <span>Web</span>  </h1>
+        <h1>Lorena Martin. <span>Web developer</span>  </h1>
         
-        <nav>
+        <nav class="navegacion">
             
-            <a href=#>Inicio</a>
-            <a href=#>Sobre mi</a>
-            <a href=#>Trabajos</a>
-            <a href=#>Contactos</a>
-            <nav>
+            <a class="enlace" href=#>Inicio</a>
+            <a class="enlace" href=#>Sobre mi</a>
+            <a class="enlace" href=#>Trabajos</a>
+            <a class="enlace" href=#>Contactos</a>
+        </nav>
                 
-                
-                <section>
-                    <h2>Diseño y desarrollo web</h2>
-                    <img src="img/location.svg" alt="Icono de localizacion">
-                    <p>Cajar, Granada</p>
-                    <a href=#>Contacto</a>
-                </section>
-            </HEader>
-            <Main>
+        <div class="banner">
+          <section class="section-banner">
+                <h2>Diseño y desarrollo web</h2>
+                <div class="center-vertical">
+                <img src="img/location.svg" alt="Icono de localizacion">
+                <p> Cajar, Granada</p>
+       </div>
+               <a class="boton" href="contacto.html">Contacto</a>
+         </section>
 
-                
-                
-                <section>
-                    <h2>Servicios</h2>
+    </div>
+
+    </header>
+
+            <Main>
+                <div class="container">
+                    <section>
+                     <h2>Servicios</h2>
+                        
+                     <div class="contenedor-servicios">
+
+                        <section class="section-servicios">
+                            <h3>Diseño web</h3>
+                            <img src="img/ankh.svg" alt="icono de localizacion">
+                        </section>
+                        
+                        <section class="section-Servicios">
+                            <h3>Aplicaciones web</h3>
+                            <img src="img/brand-redux.svg" alt="icono de localizacion">
+                        </section>
+                        
+                        <section class="section-servicios">
+                            <h3>Web comercial</h3>
+                            <iframe src="img/shopping-bag-discount.svg" frameborder="0"></iframe>
+                        </section>
+                    </div>
+                    </section>
+                    <!-- fij servicios -->
                     
                     <section>
-                        <h3>Diseño web</h3>
-                        <img src="img/ankh.svg" alt="">
+                        <h2>Contacto</h2>
+                        <!-- formulario -->
+                        <form>
+                            <fieldset>
+                                <legend>Contacto con el siguiente formulario</legend>
+                                <Label>Nombre</Label>
+                                <input type="text" placeholder="Nombre">
+                                
+                                <label>Telefono</label>
+                                <input type="number" placeholder="number"> 
+                                
+                                <label>Email</label>
+                                <input type="email" placeholder="email">
+                                
+                                <LAbel>Comentarios</LAbel>
+                                <textarea></textarea>
+                                
+                                <input type="submit" value="Enviar">
+                            </fieldset>
+                        </form>
+                        
                     </section>
                     
-                    <section>
-                        <h3>Aplicaciones web</h3>
-                        <img src="img/brand-redux.svg" alt="">
-                    </section>
-                    
-                    <section>
-                        <h3>Web comercial</h3>
-                        <iframe src="img/shopping-bag-discount.svg" frameborder="0"></iframe>
-                    </section>
-                    
-                    
-                    
-                    
-                    
-                    
-                </section>
-                <!-- fij servicios -->
-                
-                <section>
-                    <h2>Contacto</h2>
-                    <!-- formulario -->
-                    <form>
-                        <fieldset>
-                            <legend>Contacto con el siguiente formulario</legend>
-                            <Label>Nombre</Label>
-                            <input type="text" placeholder="Nombre">
-                            
-                            <label>Telefono</label>
-                            <input type="number" placeholder="number"> 
-                            
-                            <label>Email</label>
-                            <input type="email" placeholder="email">
-                            
-                            <LAbel>Comentarios</LAbel>
-                            <textarea></textarea>
-                            
-                            <input type="submit" value="Enviar">
-                        </fieldset>
-                    </form>
-                    
-                </section>
-                
-                
-            </Main>
+                </div>
+                <!-- fin div container -->
+                </Main>
             <footer>
                 <p>Todos los derechos reservados. Lorena Martin</p>
             </footer>
                 
-            </body>
+</body>
