@@ -1,3 +1,5 @@
+/* variables para los colores y el radio de los bordes
+ */
 :root {
     --white:#ffffff;
     --dark:#000000;
@@ -6,22 +8,31 @@
     --secundaryLight:hwb(212 78% 10%);
 }
 
-
+/* tipo y tamaño de la fuente */
 html {
      font-family: "roboto",sans-serif;
      font-size: 62.5%;
+     /* scrool animado */
+     scroll-behavior: smooth;
 }
+
+/* hace que el contenedor mida lo que se especifica en el width y en el height */
 
 * {
     box-sizing: border-box;
     
 }
 
+/* pone un degradado de fondo */
+
 body {
     background-image: linear-gradient(to top, var(--secundaryLight) 0%, var(--secundary) 100%)
 }
 
+/* tamaños para loe textos */
+
 header h1 {
+    margin: 0.5rem;
     text-align: center;
     font-size: 4rem ;
     color:var(--dark);
@@ -33,17 +44,33 @@ header h1 span {
 font-size: 2rem;
 }
 
+h2 {
+font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+font-size: 1.5rem;
+}
+
 a {
     text-decoration: none;
 }
 
+/* barra de navegacion */
+
 .navegacion {
     background-color: var(--primary);
-    padding: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* @media query para modificar reglas:
+se aplican las reglas que hay dentro de la media query si la ventana del navegador mide un minimo de 480px */
 
 @media (min-width: 480px) {
     .navegacion {
@@ -52,12 +79,23 @@ a {
     }
 }
 
-.enlace {
+/* enlaces de la barra de navegacion */
+.navegacion a {
+    padding: 1rem;
     color: var(--white);
     text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.navegacion a :hover {
+background-color: var(--secundary);
+color: var(--dark);
 }
 
 
+/* cabecera */
 
 .banner {
     background-image: url(../img/laptop-2838921_1280.jpg);
@@ -69,10 +107,12 @@ a {
 }
 
 .section-banner {
-    color: white;
-    background-color: rgba( 0, 0, 0, 0.5);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
+
+    /* alinear hijos horizontal y vertical */
 
     align-items: center;
     display: flex;
@@ -82,21 +122,38 @@ a {
 
 .section-banner img {
     width: 2rem;
+    margin-right: 0.5rem;
+}
+
+.section-banner p,
+.section-banner h2 {
+    color: var(--white);
+}
+    
+.section-banner p {
+    font-weight: 600;
+}  
+
+/* alinear el icono y el parrafo */
+.center-vertical {
+    display: flex;
+    align-items: center;
 }
 
 .boton {
     background-color: var(--secundary);
-    padding: 1rem 3rem ;
     color: var(--white);
-    font-size: 1rem;
-    font-weight:bold;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
     text-transform: uppercase;
-    border-radius: 0.5rem;
+    border-radius: var(--radio-borde);
     width: 90%;
     text-align: center;
-    
-    
 }
+
+/* Media query para que el boton no ocupe todo el ancho para un minimo de pantalla 480px */
 
 @media (min-width: 480px)  {
     .boton {
@@ -104,51 +161,50 @@ a {
     }
 }
 
-
-.section-banner p,
-.section-banner h2 {
-    color: var(--white);
-    
-}
-
-.center-vertical {
-    display: flex;
-    align-items: center;
-}
-
+/* contenedor principal
+contiene todo el main */
 .container {
+    margin-top: 1rem;
     background-color: var(--white);
     padding: 1rem;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
+    border-radius:0.5rem
+   
 }
 
-.container section h2 {
-    text-transform: uppercase;
-}
+/* media query si la pantalla mide un minimo de 1200px(pc)
+establece un ancho fijo del contenedor y lo centra */
 
 @media (min-width: 1200px) {
     .container {
         width: 1100px;
         margin: 2rem auto;
     }
-    
 }
 
+/* clases que definen las sombras */
 .shadow {
-    
-    box-shadow: -13px 10px 5px 0px rgba(0,0,0,1);
+    box-shadow: -3px 10px 19px -4px  rgba(0,0,0,0.5);
 }
 
+.shadow-small {
+    box-shadow: 4px 4px 8px 0px rgba( 0, 0, 0, 0.5);
+}
+
+/* centra todos los textos que haya dentro de las etiquetas */
 section  {
     text-align: center;
 }
 
+/* esta clase envuelve tres secciones dentro
+establece que estas secciones se alineen en una columna */
+
 .contenedor-servicios {
     display: flex;
     flex-direction: column;
-    
 }
+
+/* media query para pantallas con un minimo de 768px
+establece que los hijos se alineen en una fila */
 
 @media (min-width: 768px) {
     .contenedor-servicios {
@@ -156,20 +212,30 @@ section  {
     }
 }
 
+.section-servicios {
+    margin: 1rem;
+}
+
+.section-servicios h3 {
+    color: var(--dark);
+    border-radius: var(--radio-borde);
+}
+
 .iconos-servicios {
     background-color: var(--secundaryLight);
     height: 7rem;
     width: 7rem;
-    border-radius: 100%;
-    padding: 2rem;
+    border-radius: 50%;
+    padding: 1rem;
 }
+
+/* separa las lineas de los parrafos al
+doble de la media por defecto */
 
 .section-servicios p {
     line-height: 2;
-}
-
-.section-servicios {
     margin: 1rem;
+    text-emphasis:justify;
 }
 
 /*  formulario */
@@ -178,14 +244,13 @@ section  {
     background-color: var(--secundaryLight);
     /* width minimo de 80 rem o 100% */
     width: min (80rem, 100€);
-    margin: 1rem auto;
-    padding: 2rem;
-    border-radius: 1rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius:var(--radio-borde);
 }
 
 .formulario fieldset {
     border: none;
-
 }
 
 .formulario legend {
@@ -197,6 +262,10 @@ section  {
 }
 
 .container-imput {
+    margin-bottom: 1rem;
+}
+
+.container-imput label{
     color: var(--secundary);
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -208,30 +277,50 @@ section  {
 .container-imput textarea {
     width: 100%;
     padding: 1rem;
-    border-radius: 5rem;
-    border: 5px solid var(--secundaryLightary);
+    border-radius:var(--radio-borde);
+    border: none
 }
  .enviar {
-    width: 100%;
+    /* width: 100%; */
+    border: none;
+    margin-top: 1rem;
+    
  }
 
   @media (min-width: 780px) { 
-    /* aplica grid 1 fila con dos columnas y dos filas con 1 columna */
+    /* aplica grid 1 fila con dos columnas */
     .imputs {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        /* el tamaño de las filas se ajusta al contenedor y al contenido */
         grid-template-rows: auto auto auto;
+        /* margen entre columnas */
         column-gap: 1rem;
-
     }
 }
 
-.container-imput:nth-child(3)
+/* selecciona el hijo 3 y 4 para que ocupen las dos columnas */
+.container-imput:nth-child(3),
 .container-imput:nth-child(4)
 {
     grid-column: 1/3;
-
 }
+
+.container-imput textarea {
+    height: 15rem;
+}
+
+/* footer */
+footer p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+footer span {
+    color: var(--dark);
+    font-size: 2rem;
+}
+
 
     
 

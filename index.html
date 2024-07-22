@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="css/syle.css">
 </head>
 <body>
-    <header>
+    <header id="inicio">
 
         <h1>Lorena Martin. <span>Web developer</span>  </h1>
         
         <nav class="navegacion">
             
-            <a class="enlace" href=#>Inicio</a>
+            <a class="enlace" href="#inicio">inicio</a>
             <a class="enlace" href=#>Sobre mi</a>
-            <a class="enlace" href=#>Trabajos</a>
-            <a class="enlace" href=#>Contactos</a>
+            <a class="enlace" href="#trabajos">Trabajos</a>
+            <a class="enlace" href="#contactos">Contactos</a>
         </nav>
                 
         <div class="banner">
@@ -27,16 +27,16 @@
                 <img src="img/location.svg" alt="Icono de localizacion">
                 <p> Cajar, Granada</p>
        </div>
-               <a class="boton" href="contacto.html">Contacto</a>
+               <a class= "boton" href="contacto.html">Contacto</a>
          </section>
-
+<!-- fin section banner -->
     </div>
 
     </header>
 
             <Main>
-                <div class="container">
-                    <section>
+                <div class="container shadow">
+                    <section id="trabajos">
                      <h2>Servicios</h2>
                         
                      <div class="contenedor-servicios">
@@ -44,11 +44,11 @@
                         <section class="section-servicios">
                             <h3>Diseño web</h3>
                             <img class="iconos-servicios" src="img/ankh.svg" alt="icono de localizacion">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nemo cum quod nobis, ipsam voluptate vitae corporis quo rem! Voluptatem assumenda qui quam non? Ad quam ut obcaecati eveniet quod!
+                            <p>El diseño web es una actividad creativa enfocada en realizar la parte visual de entornos y materiales digitales. Se encarga de layouts e interfaces de plataformas digitales como un sitio web o una app y realiza una configuración visible y funcional para el usuario al distribuir y conceptualizar diversos elementos.
                             </p>
                         </section>
                         
-                        <section class="section-Servicios">
+                        <section class="section-servicios">
                             <h3>Aplicaciones web</h3>
                             <img class="iconos-servicios" src="img/brand-redux.svg" alt="icono de localizacion">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente totam recusandae neque quam tenetur suscipit odit minus provident blanditiis perspiciatis repellat, placeat nam soluta eveniet quisquam, similique inventore ad consequatur?
@@ -67,7 +67,7 @@
                     </section>
                     <!-- fij servicios -->
                     
-                    <section>
+                    <section id="contactos">
                         <h2>Contacto</h2>
                         <!-- formulario -->
                         <form class="formulario">
@@ -102,17 +102,19 @@
 
                                 
 
-                                <input class="boton Enviar" type="submit" value="Enviar">
+                                <input class="boton enviar" type="submit" value="enviar">
                              </fieldset>
                         </form>
                         
                     </section>
                     
                 </div>
-                <!-- fin div container -->
+                <!-- fin div container shadow -->
                 </Main>
             <footer>
-                <p>Todos los derechos reservados. Lorena Martin</p>
+                <p>
+                    ®Lorena Farinacci
+                    <a class="enlace" href="#inicio">Inicio</a></p>
             </footer>
                 
 </body>
